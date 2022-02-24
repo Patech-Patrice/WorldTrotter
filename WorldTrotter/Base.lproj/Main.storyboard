@@ -85,53 +85,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  ???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OKO-3x-JZY">
+                                <rect key="frame" x="190.33333333333334" y="418" width="33.666666666666657" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N8a-Oj-vgP">
+                                <rect key="frame" x="157" y="473" width="100" height="28.333333333333314"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Show Answer">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="0.0"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="showAnswer:" destination="8Af-sK-q6n" eventType="touchUpInside" id="BmL-mY-Ryi"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   ???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ff7-wa-zGK">
-                                <rect key="frame" x="170" y="92" width="85.666666666666686" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <rect key="frame" x="188" y="143" width="38" height="20.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXZ-d9-RQo">
-                                <rect key="frame" x="116.99999999999999" y="162" width="191.66666666666663" height="44"/>
+                                <rect key="frame" x="155" y="198" width="104.33333333333331" height="28.333333333333343"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Next Question">
-                                    <fontDescription key="titleFontDescription" type="italicSystem" pointSize="25"/>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="0.0"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="showNextQuestion:" destination="8Af-sK-q6n" eventType="touchUpInside" id="7lz-N2-gBo"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  ???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OKO-3x-JZY">
-                                <rect key="frame" x="170" y="377" width="85.666666666666686" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4gL-qs-gWA">
-                                <rect key="frame" x="99.999999999999986" y="453" width="225.66666666666663" height="44"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Show Answer">
-                                    <fontDescription key="titleFontDescription" type="italicSystem" pointSize="25"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="showAnswer:" destination="8Af-sK-q6n" eventType="touchUpInside" id="mPR-YU-ZZb"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3Q7-HJ-zhn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="nXZ-d9-RQo" firstAttribute="leading" secondItem="3Q7-HJ-zhn" secondAttribute="leading" constant="117" id="CJS-go-6FL"/>
-                            <constraint firstItem="OKO-3x-JZY" firstAttribute="centerX" secondItem="ff7-wa-zGK" secondAttribute="centerX" id="EpY-1S-W8A"/>
-                            <constraint firstItem="4gL-qs-gWA" firstAttribute="leading" secondItem="3Q7-HJ-zhn" secondAttribute="leading" constant="100" id="Jf4-gw-rIp"/>
-                            <constraint firstItem="4gL-qs-gWA" firstAttribute="top" secondItem="OKO-3x-JZY" secondAttribute="bottom" constant="28" id="MUj-Ht-VrU"/>
-                            <constraint firstItem="OKO-3x-JZY" firstAttribute="top" secondItem="nXZ-d9-RQo" secondAttribute="bottom" constant="171" id="Xmf-Yh-CDd"/>
-                            <constraint firstItem="nXZ-d9-RQo" firstAttribute="top" secondItem="ff7-wa-zGK" secondAttribute="bottom" constant="22" id="ZdN-Df-8Fc"/>
-                            <constraint firstItem="nXZ-d9-RQo" firstAttribute="centerX" secondItem="ff7-wa-zGK" secondAttribute="centerX" id="hrs-ls-tNx"/>
-                            <constraint firstItem="ff7-wa-zGK" firstAttribute="top" secondItem="3Q7-HJ-zhn" secondAttribute="top" constant="48" id="ikc-J4-9Nz"/>
-                            <constraint firstItem="ff7-wa-zGK" firstAttribute="leading" secondItem="3Q7-HJ-zhn" secondAttribute="leading" constant="170" id="o7B-cR-Rcl"/>
-                            <constraint firstItem="OKO-3x-JZY" firstAttribute="leading" secondItem="3Q7-HJ-zhn" secondAttribute="leading" constant="170" id="vXX-Bk-eN0"/>
-                            <constraint firstItem="4gL-qs-gWA" firstAttribute="centerX" secondItem="ff7-wa-zGK" secondAttribute="centerX" id="yXW-9R-UVD"/>
+                            <constraint firstItem="N8a-Oj-vgP" firstAttribute="top" secondItem="OKO-3x-JZY" secondAttribute="bottom" constant="34.666666666666686" id="I6s-nP-pa6"/>
+                            <constraint firstItem="nXZ-d9-RQo" firstAttribute="top" secondItem="ff7-wa-zGK" secondAttribute="bottom" constant="34.666666666666686" id="VEA-uA-SzA"/>
+                            <constraint firstItem="OKO-3x-JZY" firstAttribute="top" secondItem="nXZ-d9-RQo" secondAttribute="bottom" constant="191.66666666666666" id="b8y-vj-Gi8"/>
+                            <constraint firstItem="nXZ-d9-RQo" firstAttribute="centerX" secondItem="ff7-wa-zGK" secondAttribute="centerX" id="bYJ-Nr-Zyi"/>
+                            <constraint firstItem="ff7-wa-zGK" firstAttribute="top" secondItem="3Q7-HJ-zhn" secondAttribute="top" constant="99" id="bo1-ZP-NUM"/>
+                            <constraint firstItem="N8a-Oj-vgP" firstAttribute="centerX" secondItem="ff7-wa-zGK" secondAttribute="centerX" id="d2H-8G-d8Q"/>
+                            <constraint firstItem="ff7-wa-zGK" firstAttribute="centerX" secondItem="slF-mz-huv" secondAttribute="centerX" id="fuC-CD-n5e"/>
+                            <constraint firstItem="N8a-Oj-vgP" firstAttribute="centerX" secondItem="slF-mz-huv" secondAttribute="centerX" id="i4J-93-FKC"/>
+                            <constraint firstItem="3Q7-HJ-zhn" firstAttribute="bottom" secondItem="N8a-Oj-vgP" secondAttribute="bottom" constant="311.66666666666663" id="oJs-bz-KI2"/>
+                            <constraint firstItem="OKO-3x-JZY" firstAttribute="centerX" secondItem="ff7-wa-zGK" secondAttribute="centerX" id="pvX-Ey-Z53"/>
+                            <constraint firstItem="OKO-3x-JZY" firstAttribute="centerX" secondItem="slF-mz-huv" secondAttribute="centerX" id="v1k-bR-Elb"/>
+                            <constraint firstItem="nXZ-d9-RQo" firstAttribute="centerX" secondItem="slF-mz-huv" secondAttribute="centerX" id="yDR-6y-Ima"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Quiz" image="heart.text.square.fill" catalog="system" id="ktk-2Y-nhP"/>

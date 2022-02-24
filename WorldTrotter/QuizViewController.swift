@@ -41,8 +41,7 @@ class QuizViewController: UIViewController {
 
 
 
-   @IBAction func showNextQuestion(_ sender: UIButton) {
-       print("Next Question Button pressed")
+    @IBAction func showNextQuestion(_ sender: UIButton) {
         currentQuestionIndex += 1
         if currentQuestionIndex == questions.count {
             currentQuestionIndex = 0
@@ -51,16 +50,14 @@ class QuizViewController: UIViewController {
         questionLabel.text = question
         answerLabel.text = "???"
     }
-//
-   @IBAction func showAnswer(_ sender: UIButton) {
-       print("Show Answer button pressed")
+    
+    @IBAction func showAnswer(_ sender: UIButton) {
         let answer: String = answers[currentQuestionIndex]
         answerLabel.text = answer
-   }
-//
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         questionLabel.text = questions[currentQuestionIndex]
     }
-    }
-
+}
