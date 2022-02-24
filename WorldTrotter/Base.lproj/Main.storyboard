@@ -80,18 +80,69 @@
         <!--Quiz-->
         <scene sceneID="SZo-IB-6WY">
             <objects>
-                <viewController title="Quiz" id="8Af-sK-q6n" customClass="QuizViewController" sceneMemberID="viewController">
+                <viewController title="Quiz" id="8Af-sK-q6n" customClass="QuizViewController" customModule="WorldTrotter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="slF-mz-huv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   ???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ff7-wa-zGK">
+                                <rect key="frame" x="170" y="92" width="85.666666666666686" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXZ-d9-RQo">
+                                <rect key="frame" x="116.99999999999999" y="162" width="191.66666666666663" height="44"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Next Question">
+                                    <fontDescription key="titleFontDescription" type="italicSystem" pointSize="25"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="showNextQuestion:" destination="8Af-sK-q6n" eventType="touchUpInside" id="7lz-N2-gBo"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  ???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OKO-3x-JZY">
+                                <rect key="frame" x="170" y="377" width="85.666666666666686" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4gL-qs-gWA">
+                                <rect key="frame" x="99.999999999999986" y="453" width="225.66666666666663" height="44"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Show Answer">
+                                    <fontDescription key="titleFontDescription" type="italicSystem" pointSize="25"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="showAnswer:" destination="8Af-sK-q6n" eventType="touchUpInside" id="mPR-YU-ZZb"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="3Q7-HJ-zhn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nXZ-d9-RQo" firstAttribute="leading" secondItem="3Q7-HJ-zhn" secondAttribute="leading" constant="117" id="CJS-go-6FL"/>
+                            <constraint firstItem="OKO-3x-JZY" firstAttribute="centerX" secondItem="ff7-wa-zGK" secondAttribute="centerX" id="EpY-1S-W8A"/>
+                            <constraint firstItem="4gL-qs-gWA" firstAttribute="leading" secondItem="3Q7-HJ-zhn" secondAttribute="leading" constant="100" id="Jf4-gw-rIp"/>
+                            <constraint firstItem="4gL-qs-gWA" firstAttribute="top" secondItem="OKO-3x-JZY" secondAttribute="bottom" constant="28" id="MUj-Ht-VrU"/>
+                            <constraint firstItem="OKO-3x-JZY" firstAttribute="top" secondItem="nXZ-d9-RQo" secondAttribute="bottom" constant="171" id="Xmf-Yh-CDd"/>
+                            <constraint firstItem="nXZ-d9-RQo" firstAttribute="top" secondItem="ff7-wa-zGK" secondAttribute="bottom" constant="22" id="ZdN-Df-8Fc"/>
+                            <constraint firstItem="nXZ-d9-RQo" firstAttribute="centerX" secondItem="ff7-wa-zGK" secondAttribute="centerX" id="hrs-ls-tNx"/>
+                            <constraint firstItem="ff7-wa-zGK" firstAttribute="top" secondItem="3Q7-HJ-zhn" secondAttribute="top" constant="48" id="ikc-J4-9Nz"/>
+                            <constraint firstItem="ff7-wa-zGK" firstAttribute="leading" secondItem="3Q7-HJ-zhn" secondAttribute="leading" constant="170" id="o7B-cR-Rcl"/>
+                            <constraint firstItem="OKO-3x-JZY" firstAttribute="leading" secondItem="3Q7-HJ-zhn" secondAttribute="leading" constant="170" id="vXX-Bk-eN0"/>
+                            <constraint firstItem="4gL-qs-gWA" firstAttribute="centerX" secondItem="ff7-wa-zGK" secondAttribute="centerX" id="yXW-9R-UVD"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Quiz" image="heart.text.square.fill" catalog="system" id="ktk-2Y-nhP"/>
+                    <connections>
+                        <outlet property="answerLabel" destination="OKO-3x-JZY" id="CGl-PM-IpX"/>
+                        <outlet property="questionLabel" destination="ff7-wa-zGK" id="IVY-bP-qzX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oyj-GL-7nK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1703" y="35"/>
+            <point key="canvasLocation" x="1702.8985507246377" y="34.821428571428569"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="407-WD-Jt5">
