@@ -41,8 +41,55 @@ class MapViewController: UIViewController {
         leadingConstraint.isActive = true
         trailingConstraint.isActive = true
         
+        
+      
+        //add UISwitch to interface
+        
+        let switchOnOff = UISwitch(frame:CGRect(x: 150, y: 150, width: 0, height: 0))
+        switchOnOff.addTarget(self, action: #selector(switchStateDidChange(_:)), for: .valueChanged)
+        switchOnOff.setOn(true, animated: false)
+        self.view.addSubview(switchOnOff)
+        
+        //Switch Margins
+        let switchOnOffMargin = view.layoutMarginsGuide
+        NSLayoutConstraint.activate([
+            switchOnOffMargin.topAnchor.constraint(equalTo: switchOnOffMargin.topAnchor, constant: 80),
+            switchOnOffMargin.heightAnchor.constraint(equalToConstant: 0),
+            switchOnOffMargin.rightAnchor.constraint(equalTo: switchOnOffMargin.rightAnchor, constant: 150 ),
+            switchOnOffMargin.leftAnchor.constraint(equalTo: switchOnOffMargin.leftAnchor, constant: 150),
+        ])
+        
+        
+        
+        //add UILabel View Programmatically, add contsraints and margins
+        let label = UILabel(frame: CGRect(x: 80, y: 100, width: 200, height: 21))
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.center = CGPoint(x: 160, y: 285)
+        label.textAlignment = .right
+        label.text = "Points of Interest"
+        self.view.addSubview(label)
+        let margineGuide = view.layoutMarginsGuide
+        NSLayoutConstraint.activate([
+            label.topAnchor.constraint(equalTo: margineGuide.topAnchor, constant: 80),
+            label.leadingAnchor.constraint(equalTo: margineGuide.leadingAnchor),
+            label.heightAnchor.constraint(equalToConstant: 40),
+            label.trailingAnchor.constraint(equalTo: margineGuide.trailingAnchor)
+        ])
     }
+    
+
     //@objc is needed to expose this method to the Objective-C runtime.
+    
+    @objc func switchStateDidChange(_ sender:UISwitch){
+        if (sender.isOn == true){
+            print("UISwitch state is now ON")
+        }
+        else{
+            print("UISwitch state is now Off")
+        }
+    }
+    
+    
     @objc func mapDidChange(_ segmentedControl: UISegmentedControl) {
         switch segmentedControl.selectedSegmentIndex {
         case 0:
@@ -54,8 +101,9 @@ class MapViewController: UIViewController {
         default:
             break
         }
-        
     }
+    
+    
 }
 
 
