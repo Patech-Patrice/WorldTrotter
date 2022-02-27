@@ -42,11 +42,16 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="97" id="Tps-dt-iTP"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="70"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
+                                <connections>
+                                    <action selector="fahrenheitFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="9K0-eQ-H4g"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="2dW-k0-tIQ"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.80385161066769006" green="0.80965763428431869" blue="0.77953572546923544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="BQe-aX-Vgs" firstAttribute="top" secondItem="tqF-aO-5zi" secondAttribute="bottom" constant="22" id="179-rm-rAk"/>
                             <constraint firstItem="tqF-aO-5zi" firstAttribute="top" secondItem="5HT-Hc-4wt" secondAttribute="bottom" constant="8" id="EMN-9u-49f"/>
@@ -62,10 +67,22 @@
                             <constraint firstItem="UE8-DI-c4A" firstAttribute="top" secondItem="fRa-ax-yk6" secondAttribute="bottom" constant="28" id="sIV-uw-aTV"/>
                             <constraint firstItem="tqF-aO-5zi" firstAttribute="top" secondItem="5HT-Hc-4wt" secondAttribute="bottom" constant="8" symbolic="YES" id="tjo-LI-UwP"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="bhr-RB-wcp" appends="YES" id="ERy-zg-9ZU"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Convert" image="ConvertIcon" id="4my-os-Eq5"/>
+                    <connections>
+                        <outlet property="celsiusLabel" destination="fRa-ax-yk6" id="cMY-Jh-QbE"/>
+                        <outlet property="textField" destination="5HT-Hc-4wt" id="hoh-HT-25n"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="bhr-RB-wcp">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="BYZ-38-t0r" id="8qE-fi-Iwe"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-832" y="36"/>
         </scene>
